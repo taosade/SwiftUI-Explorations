@@ -30,7 +30,8 @@ while true
 
         break
     }
-    else if currentRoll + currentSquare > finalSquare
+    
+    if currentRoll + currentSquare > finalSquare
     {
         print("\(message) - Damn it! Too much. Gotta roll again.")
 
