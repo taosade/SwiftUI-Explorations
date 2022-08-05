@@ -1,3 +1,5 @@
+// Classic game of Snakes&Ladders inspired by the official Swift Language Guide
+
 var currentRoll: Int
 var currentSquare: Int = 0
 let finalSquare: Int = 25
