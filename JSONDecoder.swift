@@ -1,4 +1,4 @@
-// Function to decode a static JSON file from app's bundle.
+// Function to decode a static JSON file from app's bundle
 
 import SwiftUI
 
