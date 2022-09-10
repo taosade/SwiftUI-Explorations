@@ -1,4 +1,4 @@
-// Playing around with view's backgrounds and overlays.
+// Playing around with view's backgrounds and overlays
 
 import SwiftUI
 
