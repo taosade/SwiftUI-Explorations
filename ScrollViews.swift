@@ -4,8 +4,6 @@ import SwiftUI
 
 struct ScrollViews: View
 {
-    let data: [String] = ["Troll", "Face", "JPG"]
-
     var body: some View
     {
         ScrollView(.vertical, showsIndicators: false)
