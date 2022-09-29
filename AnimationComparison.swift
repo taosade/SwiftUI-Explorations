@@ -21,8 +21,6 @@ struct AnimationComparison: View
 {
     @State private var rectangleState: Bool = false
 
-    let duration: Double = 5
-
     var body: some View
     {
         VStack()
