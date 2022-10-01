@@ -1,9 +1,9 @@
 // Classic game of Snakes&Ladders inspired by the official Swift Language Guide
 
-var currentRoll: Int
+var currentRoll: Int = 0
 var currentSquare: Int = 0
 let finalSquare: Int = 25
-var message:String
+var message: String = ""
 var rollCount: Int = 0
 var squares = [Int](repeating: 0, count: finalSquare)
 
