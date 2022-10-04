@@ -6,7 +6,7 @@ struct Alerts: View
 {
     @State private var alertShow: Bool = false
     @State private var alertTitle: String = ""
-    @State private var alertMessage: String = ""
+    @State private var alertMessage: String? = nil
     @State private var backgroundColor: Color = .black
 
     enum MyAlerts
@@ -16,7 +16,7 @@ struct Alerts: View
         case success
     }
 
-    func showAlert(_ message: String = "", _ alertType: MyAlerts = .error)
+    func showAlert(_ message: String? = nil, _ alertType: MyAlerts = .error)
     {
         switch alertType
         {
@@ -57,7 +57,7 @@ struct Alerts: View
         {
             Alert(
                 title: Text(alertTitle),
-                message: Text(alertMessage),
+                message: alertMessage == nil ? nil : Text(alertMessage!),
                 primaryButton: .default(Text("OK")),
                 secondaryButton: .cancel() { withAnimation() { backgroundColor = .black } })
         }
