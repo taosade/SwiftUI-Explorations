@@ -28,7 +28,9 @@ struct TextFields: View
             }
         }.alert(isPresented: $showAlert)
         {
-            Alert(title: Text(textValue.trimmingCharacters(in: .whitespacesAndNewlines).count == 0 ? "Text field is empty" : textValue))
+            Alert(
+                title: Text("Entered value:"),
+                message: Text(textValue))
         }
     }
 }
