@@ -1,8 +1,10 @@
+// Two kinds of TabView with programmatic switching
+
 import SwiftUI
 
 struct MyTabView: View
 {
-    let colors: [Color] = [.red, .green, .blue]
+    let colors: [Color] = [.red, .green, .blue, .orange, .purple]
 
     @State var selectedColor: Color = .red
 
@@ -34,7 +36,7 @@ struct ColorTab: View
             {
                 selectedColor
 
-                HStack
+                TabView
                 {
                     ForEach(colors, id: \.self)
                     {
@@ -44,11 +46,11 @@ struct ColorTab: View
                             {
                                 Circle()
                                     .fill(color)
-                                    .frame(width: 100, height: 100)
+                                    .frame(width: 200, height: 200)
                             })
                         }
                     }
-                }
+                }.tabViewStyle(.page)
             }.navigationTitle(selectedColor.description.capitalized)
         }
     }
