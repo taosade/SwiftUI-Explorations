@@ -42,7 +42,7 @@ struct ColorTab: View
                     {
                         color in if color != selectedColor
                         {
-                            Button(action: { selectedColor = color}, label:
+                            Button(action: { selectedColor = color }, label:
                             {
                                 Circle()
                                     .fill(color)
