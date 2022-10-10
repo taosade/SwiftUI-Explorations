@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct PickerView: View
+struct AppearDisappearView: View
 {
     @State var count: Int = 0
 
@@ -31,6 +31,6 @@ struct Preview: PreviewProvider
 {
     static var previews: some View
     {
-        PickerView()
+        AppearDisappearView()
     }
 }
