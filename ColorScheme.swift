@@ -6,11 +6,12 @@ struct ColorSchemeView: View
 {
     @Environment(\.colorScheme) var colorScheme
 
-    func myCircle(_ color: Color) -> some View
+    func myCircle(_ color: Color, adaptive: Bool = false) -> some View
     {
         return HStack
         {
-            Text(color.description.capitalized).font(.title)
+            Text(adaptive ? "Adaptive \(color.description)" : color.description.capitalized)
+                .font(.title)
 
             Spacer()
 
@@ -30,7 +31,9 @@ struct ColorSchemeView: View
 
             myCircle(.white)
 
-            myCircle(colorScheme == .light ? .green : .orange)
+            myCircle(
+                colorScheme == .light ? .green : .orange,
+                adaptive: true)
         }
         .padding(.horizontal)
     }
@@ -42,9 +45,9 @@ struct Preview: PreviewProvider
     {
         Group
         {
-            ColorScheme().preferredColorScheme(.light)
+            ColorSchemeView().preferredColorScheme(.light)
 
-            ColorScheme().preferredColorScheme(.dark)
+            ColorSchemeView().preferredColorScheme(.dark)
         }
     }
 }
