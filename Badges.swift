@@ -1,3 +1,5 @@
+// Badges on tab/list items
+
 import SwiftUI
 
 struct BadgesView: View
