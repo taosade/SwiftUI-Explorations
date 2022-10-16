@@ -1,3 +1,5 @@
+// Handling test field's submit action
+
 import SwiftUI
 
 struct OnSubmitView: View
