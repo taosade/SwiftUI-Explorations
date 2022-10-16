@@ -1,3 +1,5 @@
+// Programmatically toggling text field's focus state
+
 import SwiftUI
 
 struct FocusStateView: View
