@@ -1,3 +1,5 @@
+// Attaching swipe actions to list items
+
 import SwiftUI
 
 struct SwipeActionsView: View
