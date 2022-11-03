@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct LongPressGesture: View
+struct MagnificationGestureView: View
 {
 	@State private var magnifyAmountC: CGFloat = 0
 	@State private var magnifyAmountR: CGFloat = 0
@@ -21,7 +21,7 @@ struct LongPressGesture: View
 			.scaleEffect(1 + magnifyAmountC)
 			.gesture(
 				MagnificationGesture()
-					.onChanged { value in if value > 1 {  magnifyAmountC = value - 1 } }
+				.onChanged { value in if value > 1 {  magnifyAmountC = value - 1 } }
 				.onEnded { _ in withAnimation { magnifyAmountC = 0 } })
 
 			// Magnification stays once the view is let go
@@ -49,6 +49,6 @@ struct LongPressGesture_Previews: PreviewProvider
 {
 	static var previews: some View
 	{
-		LongPressGesture()
+		MagnificationGestureView()
 	}
 }
