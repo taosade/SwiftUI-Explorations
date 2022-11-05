@@ -5,8 +5,8 @@ import SwiftUI
 struct ScrollViewReaderView: View
 {
 	@State private var input: String = ""
+	
 	@State private var scrollIndex: Int = 0
-
 
 	var body: some View
 	{
